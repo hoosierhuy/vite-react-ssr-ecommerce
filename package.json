@@ -1,0 +1,37 @@
+{
+  "name": "vite-react-ssr-ecommerce",
+  "version": "1.0.0",
+  "main": "server.mjs",
+  "scripts": {
+    "build:client": "vite build --outDir dist/shop/client",
+    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/shop/server",
+    "build": "npm run build:client && npm run build:server",
+    "tw": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch --minify",
+    "dev": "node dev.mjs",
+    "preview": "node server.mjs"
+  },
+  "keywords": [],
+  "author": "Huy 'Hugh' Nguyen",
+  "license": "ISC",
+  "description": "Vite React Server Side Rendering Ecommerce Demo",
+  "type": "module",
+  "dependencies": {
+    "axios": "1.7.7",
+    "compression": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "11.0.6",
+    "express": "5.0.1",
+    "isbot": "^5.1.17",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "6.27.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.3",
+    "cross-env": "7.0.3",
+    "tailwindcss": "3.4.14",
+    "vite": "5.4.10",
+    "vite-plugin-environment": "^1.1.3"
+  }
+}
